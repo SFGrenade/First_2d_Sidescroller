@@ -1,0 +1,32 @@
+New Map File Format:
+
+"SFLvl",
+map width as uint16_t
+map height as uint16_t
+map bgm as string with " at start and end
+
+// in the future, now there would be a list of entities
+entity count (which is now 0) as uint16_t
+for each entity:
+	entity id as uint16_t
+	entity x coord as uint16_t
+	entity y coord as uint16_t
+	entity size-x as uint16_t
+	entity size-y as uint16_t
+	entity max-health as int16_t
+	entity moves-vertical as bool (?)
+	entity move-radius as uint16_t
+
+row count as uint16_t
+
+for each row:
+	tile count (in the row) as uint16_t
+
+	for each tile:
+		tile id (depending on what tile it is) as uint16_t
+		tile type (not for tileName = 0) as uint16_t
+		tile color (not for tileName = 0) as uint32_t
+		tile terrain-type (only for tileName = 2) as int
+		tile transition-to-x (only for tileName = 1) as uint16_t
+		tile transition-to-y (only for tileName = 1) as uint16_t
+		tile transition-to-level-id (only for tileName = 1) as uint16_t
