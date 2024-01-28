@@ -9,10 +9,11 @@
 #define CONVERTER_NEW2TGA_H_
 
 #include <iostream>
-#include <string>
-#include <vector>
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <string>
+#include <vector>
+
 
 #endif /* CONVERTER_NEW2TGA_H_ */

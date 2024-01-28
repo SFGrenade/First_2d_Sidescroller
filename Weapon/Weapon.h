@@ -11,32 +11,35 @@
 // Including SDL headers
 #include <SDL2/SDL.h>
 #include <vector>
+
 #include "../overallObjects.h"
 #include "Projectiles/BaseProjectile.h"
+
 
 namespace game {
 
 class Level;
 
 class Weapon {
-protected:
-	SDL_Surface* image;
-	char* name;
-	char* shortDesc;
-	char* longDesc;
+  protected:
+  SDL_Surface* image;
+  char* name;
+  char* shortDesc;
+  char* longDesc;
 
-	std::vector<BaseProjectile*> projectiles;
-public:
-	Weapon(const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc);
-	virtual ~Weapon();
+  std::vector< BaseProjectile* > projectiles;
 
-	SDL_Surface* getImage();
-	char* getName();
-	char* getShortDesc();
-	char* getLongDesc();
+  public:
+  Weapon( const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc );
+  virtual ~Weapon();
 
-	virtual void shoot(twoDPos from, twoDPos to) = 0;
-	virtual void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level) = 0;
+  SDL_Surface* getImage();
+  char* getName();
+  char* getShortDesc();
+  char* getLongDesc();
+
+  virtual void shoot( twoDPos from, twoDPos to ) = 0;
+  virtual void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level ) = 0;
 };
 
 } /* namespace game */

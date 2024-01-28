@@ -12,13 +12,13 @@
 
 namespace game {
 
-class IceBeam: public Weapon {
-public:
-	IceBeam();
-	virtual ~IceBeam();
+class IceBeam : public Weapon {
+  public:
+  IceBeam();
+  virtual ~IceBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

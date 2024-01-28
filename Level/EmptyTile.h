@@ -12,16 +12,16 @@
 
 namespace game {
 
-class EmptyTile: public Tile {
-public:
-	EmptyTile();
-	virtual ~EmptyTile();
+class EmptyTile : public Tile {
+  public:
+  EmptyTile();
+  virtual ~EmptyTile();
 
-	virtual std::string toString();
+  virtual std::string toString();
 
-	void collide(Player* player, Map* map);
-	void collideEntity(BaseEntity* entity, Map* map);
-	void hit(DamageType damageType);
+  void collide( Player* player, Map* map );
+  void collideEntity( BaseEntity* entity, Map* map );
+  void hit( DamageType damageType );
 };
 
 } /* namespace game */

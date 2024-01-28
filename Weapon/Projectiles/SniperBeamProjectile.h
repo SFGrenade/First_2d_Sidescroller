@@ -14,12 +14,12 @@ namespace game {
 
 class Level;
 
-class SniperBeamProjectile: public BaseProjectile {
-public:
-	SniperBeamProjectile(twoDPos from, twoDPos to, int64_t timeToLive);
-	virtual ~SniperBeamProjectile();
+class SniperBeamProjectile : public BaseProjectile {
+  public:
+  SniperBeamProjectile( twoDPos from, twoDPos to, int64_t timeToLive );
+  virtual ~SniperBeamProjectile();
 
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

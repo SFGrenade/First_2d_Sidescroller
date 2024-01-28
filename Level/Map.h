@@ -8,8 +8,9 @@
 #ifndef MAP_H_
 #define MAP_H_
 
-#include <vector>
 #include <stdint.h>
+#include <vector>
+
 
 namespace game {
 
@@ -17,22 +18,23 @@ class Level;
 class BGMPlayer;
 
 class Map {
-	std::vector<Level*> levelVector;
-	Level* selectedLevel;
-	BGMPlayer* bgmPlayer;
-	int currentIndex;
-public:
-	Map(BGMPlayer* newBgmPlayer);
-	virtual ~Map();
+  std::vector< Level* > levelVector;
+  Level* selectedLevel;
+  BGMPlayer* bgmPlayer;
+  int currentIndex;
 
-	void addLevel(Level* level);
-	void selectLevel(int index);
-	Level* getSelectedLevel();
+  public:
+  Map( BGMPlayer* newBgmPlayer );
+  virtual ~Map();
 
-	Level* loadLevelXML(uint16_t levelNum, BGMPlayer* bgmPlayer);
-	Level* loadLevelNew(uint16_t levelNum, BGMPlayer* bgmPlayer);
+  void addLevel( Level* level );
+  void selectLevel( int index );
+  Level* getSelectedLevel();
 
-	void updateEntities(uint64_t msSinceLastFrame);
+  Level* loadLevelXML( uint16_t levelNum, BGMPlayer* bgmPlayer );
+  Level* loadLevelNew( uint16_t levelNum, BGMPlayer* bgmPlayer );
+
+  void updateEntities( uint64_t msSinceLastFrame );
 };
 
 } /* namespace game */

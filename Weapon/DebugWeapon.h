@@ -12,13 +12,13 @@
 
 namespace game {
 
-class DebugWeapon: public Weapon {
-public:
-	DebugWeapon(const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc);
-	virtual ~DebugWeapon();
+class DebugWeapon : public Weapon {
+  public:
+  DebugWeapon( const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc );
+  virtual ~DebugWeapon();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

@@ -12,13 +12,13 @@
 
 namespace game {
 
-class GrappleBeam: public Weapon {
-public:
-	GrappleBeam();
-	virtual ~GrappleBeam();
+class GrappleBeam : public Weapon {
+  public:
+  GrappleBeam();
+  virtual ~GrappleBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

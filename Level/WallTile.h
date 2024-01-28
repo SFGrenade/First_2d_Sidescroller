@@ -12,16 +12,16 @@
 
 namespace game {
 
-class WallTile: public Tile {
-public:
-	WallTile(uint16_t tileType = 0, uint32_t tileColor = 0, int tileTerrainType = TERRAINTYPE_NORMAL);
-	virtual ~WallTile();
+class WallTile : public Tile {
+  public:
+  WallTile( uint16_t tileType = 0, uint32_t tileColor = 0, int tileTerrainType = TERRAINTYPE_NORMAL );
+  virtual ~WallTile();
 
-	virtual std::string toString();
+  virtual std::string toString();
 
-	void collide(Player* player, Map* map);
-	void collideEntity(BaseEntity* entity, Map* map);
-	void hit(DamageType damageType);
+  void collide( Player* player, Map* map );
+  void collideEntity( BaseEntity* entity, Map* map );
+  void hit( DamageType damageType );
 };
 
 } /* namespace game */

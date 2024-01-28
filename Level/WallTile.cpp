@@ -5,30 +5,27 @@
  *      Author: SFG
  */
 
-#include <iostream>
 #include "WallTile.h"
+
+#include <iostream>
+
 
 namespace game {
 
-WallTile::WallTile(uint16_t tileType, uint32_t tileColor, int tileTerrainType) :
-		Tile(tileType, tileColor, tileTerrainType) {
-}
+WallTile::WallTile( uint16_t tileType, uint32_t tileColor, int tileTerrainType ) : Tile( tileType, tileColor, tileTerrainType ) {}
 
 WallTile::~WallTile() {
-	this->~Tile();
+  // this->~Tile();
 }
 
-void WallTile::collide(Player* player, Map* map) {
-}
-void WallTile::collideEntity(BaseEntity* entity, Map* map) {
-}
+void WallTile::collide( Player* player, Map* map ) {}
+void WallTile::collideEntity( BaseEntity* entity, Map* map ) {}
 
-void WallTile::hit(DamageType damageType) {
-}
+void WallTile::hit( DamageType damageType ) {}
 
 std::string WallTile::toString() {
-	std::string ret("WallTile{}");
-	return ret;
+  std::string ret( "WallTile{}" );
+  return ret;
 }
 
 } /* namespace game */

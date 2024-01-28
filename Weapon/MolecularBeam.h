@@ -12,13 +12,13 @@
 
 namespace game {
 
-class MolecularBeam: public Weapon {
-public:
-	MolecularBeam();
-	virtual ~MolecularBeam();
+class MolecularBeam : public Weapon {
+  public:
+  MolecularBeam();
+  virtual ~MolecularBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

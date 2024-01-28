@@ -31,9 +31,9 @@ static uint64_t msLastFrame = 0;
 static uint16_t gravity = 1500;
 
 typedef struct {
-	double x, y;
+  double x, y;
 } twoDPos;
 
-static SDL_Rect* pixel = new SDL_Rect { 0, 0, 1, 1 };
+static SDL_Rect* pixel = new SDL_Rect{ 0, 0, 1, 1 };
 
 #endif /* OVERALLOBJECTS_H_ */

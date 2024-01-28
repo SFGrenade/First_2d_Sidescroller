@@ -12,13 +12,13 @@
 
 namespace game {
 
-class SniperBeam: public Weapon {
-public:
-	SniperBeam();
-	virtual ~SniperBeam();
+class SniperBeam : public Weapon {
+  public:
+  SniperBeam();
+  virtual ~SniperBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

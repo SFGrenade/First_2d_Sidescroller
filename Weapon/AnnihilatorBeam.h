@@ -12,13 +12,13 @@
 
 namespace game {
 
-class AnnihilatorBeam: public Weapon {
-public:
-	AnnihilatorBeam();
-	virtual ~AnnihilatorBeam();
+class AnnihilatorBeam : public Weapon {
+  public:
+  AnnihilatorBeam();
+  virtual ~AnnihilatorBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

@@ -12,13 +12,13 @@
 
 namespace game {
 
-class PowerBeam: public Weapon {
-public:
-	PowerBeam();
-	virtual ~PowerBeam();
+class PowerBeam : public Weapon {
+  public:
+  PowerBeam();
+  virtual ~PowerBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

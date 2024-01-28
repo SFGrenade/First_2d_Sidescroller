@@ -6,21 +6,21 @@
  */
 
 #include "DebugWeapon.h"
+
 #include <iostream>
+
 
 namespace game {
 
-DebugWeapon::DebugWeapon(const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc) : Weapon(pathToFile, name, shortDesc, longDesc) {
-}
+DebugWeapon::DebugWeapon( const char* pathToFile, const char* name, const char* shortDesc, const char* longDesc )
+    : Weapon( pathToFile, name, shortDesc, longDesc ) {}
 
 DebugWeapon::~DebugWeapon() {
-	this->~Weapon();
+  // this->~Weapon();
 }
 
-void DebugWeapon::shoot(twoDPos from, twoDPos to) {
-}
+void DebugWeapon::shoot( twoDPos from, twoDPos to ) {}
 
-void DebugWeapon::compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level) {
-}
+void DebugWeapon::compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level ) {}
 
 } /* namespace game */

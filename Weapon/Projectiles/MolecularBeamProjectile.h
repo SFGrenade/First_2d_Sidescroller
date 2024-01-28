@@ -14,12 +14,12 @@ namespace game {
 
 class Level;
 
-class MolecularBeamProjectile: public BaseProjectile {
-public:
-	MolecularBeamProjectile(twoDPos from, twoDPos to, int64_t timeToLive);
-	virtual ~MolecularBeamProjectile();
+class MolecularBeamProjectile : public BaseProjectile {
+  public:
+  MolecularBeamProjectile( twoDPos from, twoDPos to, int64_t timeToLive );
+  virtual ~MolecularBeamProjectile();
 
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */

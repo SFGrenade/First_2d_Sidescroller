@@ -12,13 +12,13 @@
 
 namespace game {
 
-class PlasmaBeam: public Weapon {
-public:
-	PlasmaBeam();
-	virtual ~PlasmaBeam();
+class PlasmaBeam : public Weapon {
+  public:
+  PlasmaBeam();
+  virtual ~PlasmaBeam();
 
-	void shoot(twoDPos from, twoDPos to);
-	void compute(uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level);
+  void shoot( twoDPos from, twoDPos to );
+  void compute( uint64_t msSinceLastFrame, SDL_Surface* screen, Level* level );
 };
 
 } /* namespace game */
